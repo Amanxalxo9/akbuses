@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AK BUSES/GALLERY</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+ margin:0;
+}
+.header-fixed {
+	background-color:#292c2f;
+	box-shadow:0 1px 1px #ccc;
+	padding: 20px 40px;
+	height: 80px;
+	color: #ffffff;
+	box-sizing: border-box;
+	top:-100px;
+
+	-webkit-transition:top 0.3s;
+	transition:top 0.3s;
+}
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder{
+	height: 80px;
+	display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+	float: left;
+	font-family: "Trirong", serif;
+	font
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+	color: #5383d3;
+}
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+	font:16px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+}
+
+.header-fixed .header-limiter nav a{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover{
+	opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+	color: #608bd2;
+	pointer-events: none;
+	opacity: 1;
+}
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+	display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+	line-height: 28px;
+	font-size: 13px;
+}
+
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+	.header-fixed {
+		padding: 20px 0;
+		height: 75px;
+	}
+
+	.header-fixed .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header-fixed .header-limiter nav {
+		line-height: 1;
+		float:none;
+	}
+
+	.header-fixed .header-limiter nav a {
+		font-size: 13px;
+	}
+
+	body.fixed .header-fixed {
+		display: none;
+	}
+
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/* STYLES SPECIFIC TO FOOTER  */
+.contact {
+  font-size:12px;
+  padding:20px;
+  font-family: inherit;
+  font-weight: bold;
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color:#070617;
+}
+i {
+  color:white;
+  opacity:80%;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: rgba(255,255,255,0.2);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+}
+.icon {
+  color:white;
+  opacity:70%;
+  
+}
+.footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: #070617;
+}
+.footer .col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+.footer .col h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: rgba(255,255,255,0.2);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+}
+.footer .col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .col ul li {
+  color: #999999;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+}
+.social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+}
+
+.social ul li i {
+  color:white;
+  opacity:80%;
+}
+.social ul li i:hover {
+  color:;
+  opacity:100%;
+}
+.footer .col ul li:hover {
+  color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+}
+.link { 
+  text-decoration:none;
+  color:white;
+  opacity:60%;
+
+}
+.link:hover {
+  color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  opacity:100%;
+}
+.clearfix {
+  clear: both;
+}
+.copyright {
+  text-align:center;
+  color:white;
+  opacity:60%;
+  padding:10px;
+}
+@media only screen and (min-width: 1280px) {
+  .contain {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1139px) {
+  .contain .social {
+    width: 1000px;
+    display: block;
+  }
+  .social h1 {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .footer .col {
+    width: 33%;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 500px) {
+    .footer .col {
+      width: 50%;
+    }
+    .footer .col h1 {
+      font-size: 14px;
+    }
+    .footer .col ul li {
+      font-size: 13px;
+    }
+}
+@media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 100%;
+  }
+}
+</style>
+<body>
+
+<!-- Header -->
+<header class="header-fixed">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">AK<span> Buses</span></a></h1>
+
+		<nav>
+			<a href="#">Home</a>
+			<a href="#">Featured</a>
+			<a href="#" class="selected">Gallery</a>
+			<a href="#">About</a>
+			<a href="#">Service</a>
+			<a href="#">Contact</a>
+		</nav>
+
+	</div>
+
+</header>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="Mahindra.jpg" style="width:100%">
+    <img src="MetroHyd.jpg" style="width:100%">
+    <img src="Kanker1.jpg" style="width:100%">
+    <img src="Mahendra3.jpg" style="width:100%">
+    <img src="Jagirdar.jpg" style="width:100%">
+    <img src="Payalintrct.jpg" style="width:100%">
+    <img src="Metro.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="Mahindra1.jpg" style="width:100%">
+    <img src="MetroHyd1.jpg" style="width:100%">
+    <img src="Krishna4.jpg" style="width:100%">
+    <img src="Mahendra1.jpg" style="width:100%">
+    <img src="royal.jpg" style="width:100%">
+    <img src="Gupta.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="Naresh.jpg" style="width:100%">
+    <img src="Dubey1.jpg" style="width:100%">
+    <img src="Metro3.jpg" style="width:100%">
+    <img src="Payaljp.jpg" style="width:100%">
+    <img src="Verma.jpg" style="width:100%">
+    <img src="Manishintrct.jpg" style="width:100%">
+    <img src="Mahindra2.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="Gurudev.jpg" style="width:100%">
+    <img src="Rajhans.jpg" style="width:100%">
+    <img src="Krishna1.jpg" style="width:100%">
+    <img src="Njbs.jpg" style="width:100%">
+    <img src="Royal1.jpg" style="width:100%">
+    <img src="raj+radhe.jpg" style="width:100%">
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="contact">
+<h2>Contact details</h2>
+          <p class="icon"><i class="fa fa-phone fa-lg" aria-hidden="true"></i>  +91 8982906140</p>
+          <p class="icon"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>  Raipur, Chhattisgarh</p>
+          <p class="icon"><i class="fa fa-envelope" aria-hidden="true"></i>  teamakgroups@gmail.com</p>
+       </div>
+       
+<div class="footer">
+  <div class="contain">
+  <div class="col">
+    <h1>Branchs</h1>
+    <ul>
+      <li><a class="link" href="#">Bus Click Raipur - BCR</a></li>
+      <li><a class="link" href="#">H.K. Buses</a></li>
+      <li><a class="link" href="#">Buses of mandla</a></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Products</h1>
+    <ul>
+      <li><a class="link" href="#">Old Vehicle</a></li>
+      <li><a class="link" href="#">Bus Body</a></li>
+      <li><a class="link" href="#">Services</a></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Accounts</h1>
+    <ul>
+      <li><a class="link" href="#">About</a></li>
+      <li><a class="link" href="#">Mission</a></li>
+      <li><a class="link" href="#">Services</a></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Resources</h1>
+    <ul>
+      <li>Webmail</li>
+      <li>Redeem code</li>
+      <li>WHOIS lookup</li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Support</h1>
+    <ul>
+      <li><a class="link" href="#">Contact us</li>
+      <li><a class="link" href="#">Web chat</li>
+      <li><a class="link" href="#">Open ticket</li>
+    </ul>
+  </div>
+  <div class="col social">
+    <h1>Social</h1>
+    <ul>
+      <li><a href="https://m.facebook.com/akbuses/" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+      <li><a href="https://www.instagram.com/akbuses/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://www.youtube.com/c/AKBUSES" target="_blank"><i class="fa fa-youtube"></i></a></li>
+      <li><a href="https://akbuses.in/" target="_blank"><i class="fa fa-google"></i></a></li>
+      <li><a href="https://wa.me/c/918982906140" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+    </ul>
+  </div>
+<div class="clearfix"></div>
+</div>
+
+<div class="copyright">
+ <h6>©AK BUSES 2020-21 ALL RIGHTS RESERVED<br>Powerd By<b> FasterPowerTechnologies</b></h6>
+</div>
+<!-- END OF FOOTER -->
+</body>
+</html>
