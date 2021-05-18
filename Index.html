@@ -1,0 +1,814 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+.header-fixed {
+	background-color:#292c2f;
+	box-shadow:0 1px 1px #ccc;
+	padding: 20px 40px;
+	height: 80px;
+	color: #ffffff;
+	box-sizing: border-box;
+	top:-100px;
+
+	-webkit-transition:top 0.3s;
+	transition:top 0.3s;
+}
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder{
+	height: 80px;
+	display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+	float: left;
+	font-family: "Trirong", serif;
+	font
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+	color: #5383d3;
+}
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+	font:16px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+}
+
+.header-fixed .header-limiter nav a{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover{
+	opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+	color: #608bd2;
+	pointer-events: none;
+	opacity: 1;
+}
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+	display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+	line-height: 28px;
+	font-size: 13px;
+}
+
+.slogen{
+  font-size:8px;
+  margin-top:-15px;
+  margin-left:140px;
+  opacity:50%;
+}
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+	.header-fixed {
+		padding: 20px 0;
+		height: 75px;
+	}
+
+	.header-fixed .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header-fixed .header-limiter nav {
+		line-height: 1;
+		float:none;
+	}
+
+	.header-fixed .header-limiter nav a {
+		font-size: 13px;
+	}
+
+	body.fixed .header-fixed {
+		display: none;
+	}
+
+}
+
+marquee {
+  font-size:10px;
+  font-family:inherit;
+  background-color:orange;
+  color:blue;
+  padding:3px;
+}
+/*
+	 We are clearing the body's margin and padding, so that the header fits properly.
+	 We are also adding a height to demonstrate the scrolling behavior. You can remove
+	 these styles.
+ */
+/* REMOVE THIS, USE YOUR OWN  */
+html,body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, Sans-serif;
+  background-color:#070617; ;
+}
+/*style the slideshow*/
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  background-color:#070617;;
+}
+
+/* Caption text */
+.text {
+  color: #fff000;
+  font-size: 10px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  opacity:80%;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 8px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+/*main page contant*/
+body {
+  background-color:white;
+}
+.main {
+  color:black;
+  font-family: inherit;
+  line-height:1.5;
+  word-spacing:5px;
+} 
+
+.head {
+  color:black;
+  font-family: inherit;
+}
+
+.Main heading {
+  text-align:center;
+  font-size:50%;
+  float:center;
+  padding:10px;
+  font-variant: small-caps;
+}
+.main paragraph {
+  padding:10px;
+}
+h3 {
+  font-size:80%;
+  text-align:center;
+  font-variant: small-caps;
+}
+.cover {
+  width:100%;
+  padding:2px;
+}
+.Route {
+ padding:10px;
+ text-align:center;
+ font-size:14px;
+}
+.Route p{
+ padding:10px;
+}
+
+.nav1 {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav1 li {
+  display: inline-block;
+  font-size: 15px;
+  padding: 15px;
+}
+a{
+  color:red;
+  text-decoration:
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ul.b {
+  list-style-type: square;
+  font-family: inherit;
+  font-size:15px;
+  text-decoration:none;
+}
+.hyper {
+  text-decoration:none;
+  color:black;
+}
+.holo {
+  text-decoration:none;
+  color:red;
+  line-height:1.5;
+}
+.holo:hover{
+  color:yellow;
+}
+#overflowTest {
+  height:20px;
+  width:100%;
+  
+}
+#overflowTest marquee {
+  color:red;
+  background-color:orange;
+  height:190px;
+  width:100%;
+}
+ul{
+  font-size:14px;
+  margin-left:-8px;
+}
+
+/* + note */
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapasible .active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+  #overflowTest{
+    height:345px;
+    background: #000000;
+    padding: 15px;
+    width: 100%;
+    overflow: 
+    border: 1px solid #ccc;
+  }
+  #overflowTest marquee{
+    height:314px;
+  }
+}
+
+/* STYLES SPECIFIC TO FOOTER  */
+.contact {
+  font-size:12px;
+  padding:20px;
+  font-family: inherit;
+  font-weight: bold;
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color:#070617;
+}
+i {
+  color:white;
+  opacity:80%;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: rgba(255,255,255,0.2);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+}
+.icon {
+  color:white;
+  opacity:70%;
+  
+}
+.footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: #070617;
+}
+.footer .col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+.footer .col h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: rgba(255,255,255,0.2);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+}
+.footer .col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .col ul li {
+  color: #999999;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+}
+.social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+}
+
+.social ul li i {
+  color:white;
+  opacity:80%;
+}
+.social ul li i:hover {
+  color:;
+  opacity:100%;
+}
+.footer .col ul li:hover {
+  color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+}
+.link { 
+  text-decoration:none;
+  color:white;
+  opacity:60%;
+
+}
+.link:hover {
+  color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  opacity:100%;
+}
+.clearfix {
+  clear: both;
+}
+.copyright {
+  text-align:center;
+  color:white;
+  opacity:60%;
+  padding:10px;
+}
+@media only screen and (min-width: 1280px) {
+  .contain {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1139px) {
+  .contain .social {
+    width: 1000px;
+    display: block;
+  }
+  .social h1 {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .footer .col {
+    width: 33%;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 500px) {
+    .footer .col {
+      width: 50%;
+    }
+    .footer .col h1 {
+      font-size: 14px;
+    }
+    .footer .col ul li {
+      font-size: 13px;
+    }
+}
+@media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 100%;
+  }
+}
+</style>
+<header class="header-fixed">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">AK<span> Buses</span></a></h1>
+		<p class="slogen"> scince 2019 </p>
+
+		<nav>
+			<a href="#" class="selected">Home</a>
+			<a href="Featured.html">Featured</a>
+			<a href="Gallery 2.0.html">Gallery</a>
+			<a href="About.html">About</a>
+			<a href="Service.html">Service</a>
+			<a href="Contact.html">Contact</a>
+		</nav>
+
+	</div>
+
+</header>
+<marquee> welcome to the ak buses | Bus Click Raipur - BCR | Buses Of Mandla | HK Buses • find Your Buses on our website..  </marquee>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="Pad1.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="Pad2.jpg" style="width:100%">
+  <div class="text">Latest News</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="Pad3.jpg" style="width:100%">
+  <div class="text">Feel The journey</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<!--Main page Content-->
+<div class="Manin Contant">
+<h3 class="Main heading">Your sefty comes first.. stay home stay safe..  </h3>
+<p class="Route">We are Working From Home to provide you Service During Lockdown.. if you need any bus information so contact us.. </p>
+</div>
+
+<ul class="nav1">
+  <li><a href="#home">Bus Click Raipur</a></li>
+  <li><a href="#about">Buses Of Mandla</a></li>
+  <li><a href="#clients">HK Buses</a>
+</ul>
+
+
+<img class="cover" src="Akcover2.jpg">
+
+<div class="row">
+  <div class="column">
+    <h2 class="head">our function</h2>
+    <button class="collapsible"> Raipur To Patna </button>
+    <div class="content">
+      <p> Naveen Transports 2x2 A/c Sleeper Coach Bus available for Durg To Patna Via Raipur, Bilaspur, Ambikapur, Aurangabad etc. Book Your Tickets online on www.nvbus.in </p>
+    </div>
+    <!--aman -->
+    <button class="collapsible"> Raipur To Hyderabad </button>
+    <div class="content">
+      <p> Most Demanded route is Hyderabad.  7 opeator giving services in this route.  currently All oprators are stopped their Raipur To Hyderabad Service  </p>
+    </div>
+    <button class="collapsible"> Raipur To Pune </button>
+    <div class="content">
+      <p> Second  Most Demanded Route is Raipur To Pune.. in this route 4 oprators gives service and now during lockdown only one oprator giving service and playing 2 buses first is 2x2 ac sleeper seater coach and 2nd Bharatbenz 2x1 Premium ac Sleeper Bus  </p>
+    </div>
+    <button class="collapsible"> Volvo Service </button>
+    <div class="content">
+      <p> currently Volvo Buses are not available during lockdown  </p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <h2 class="head">News</h2>
+    <div id="overflowTest"><marquee behavior="scroll" direction="up" scrollamount="1">
+      <ul>
+      <li> Mahindra Travels (Shiv Shakti Transport) Restarted their <b>Raipur To Varanasi</b> Service </li> <br>
+      <li> उपलब्ध रुट की लिस्ट जारी किया गया है आप निचे दिए लिंक में जाकर देख सकते हैं </li><br>
+      <li> मंडला (मध्यप्रदेश) से आने जाने वाली सभी चालू व बंद बसों की सुची जारी कर दिया गया है आप निचे दिए लिंक पर जाकर देख सकते हैं </li><br>
+      <li> इस वेबसाइट में रात्रि कालीन लग्जरी बस सेवाओं की जानकारी उपलब्ध किया गया है जब छोटी रुट वाली ए/सी सा साधारण बस सेवा चालू होगी तब उनकी जानकारी भी उपलब्ध कर दिया जाएगा </li><br>
+      <li> वेबसाइट में बस की प्रचार के लिए आप हमें संपर्क कर सकते हैं </li>
+      </ul>
+    </marquee>
+    </div>
+  </div>
+  
+  <div class="column">
+    <h2 class="head">LINKS</h2>
+    <a href="Route Dictionary.html" class="holo">Route Dictionary</a><br>
+    <a href="Closhed Route.html" class="holo">Closed Route List</a><br>
+    <a href="Available Route.html" class="holo">Avalible Route List</a><br>
+    <a href="New Oprator.html" class="holo">Oprator List</a><br>
+    <a href="Tourist Place.html" class="holo">Touriat Places</a><br>
+    <a href="New Services.html" class="holo">New Services</a><br>
+    <a href="Route Dictionary Buses Of Mandla.html" class="holo">Mandla Buses List</a><br>
+    <a href="Bus Body Builders.html" class="holo">Bus Body Builders of Chhattisgarh</a><br>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="column">
+    <h2 class="head">our target</h2>
+    <p class="main">Hello..! <br>We want to make traveling in Chhattisgarh easy .. We will give you information about the best bus service so that you do not have any problem in traveling .. Our team members are present in different places of Chhattisgarh state .. Now also outside Chhattisgarh Our coverage is increasing ..</p>
+  </div>
+  
+  <div class="column">
+    <h2 class="head">our coverage</h2>
+    <p class="main">We are trying to increase our coverage all over chhattisgarh.. our coverage reached Following Cities.. Nagri, Bhanpuri, Raipur, Bhilai, Durg, Dharmjaigarh, Janjgir,</p>
+  </div>
+  
+  <div class="column">
+    <h2 class="head">Popular Routes</h2>
+    <p class="main"></p>
+    
+  <ul class="b">
+    <li><a class="hyper" href="Raipur to hyderabad buses.html">Raipur To Hyderabad</a></li>
+    <li><a class="hyper" href="Raipur To Pune Buses.html">Raipur To Pune</a></li>
+    <li><a class="hyper" href="Raipur To Indore Buses.html">Raipur To Indore</a></li>
+    <li><a class="hyper" href="Raipur to nagpur buses.html">Raipur To Nagpur</a></li>
+    <li><a class="hyper" href="Raipur To Ambikapur Buses.html">Raipur To Ambikapur</a></li>
+    <li><a class="hyper" href="Raipur To jagdalpur Buses.html">Raipur To Jagdalpur</a></li>
+    <li><a class="hyper" href="Raipur To jashpur Buses.html">Raipur To Jashpur</a></li>
+    <li><a class="hyper" href="Raipur To Ranchi Buses.html">Raipur To Ranchi</a></li>
+    <li><a class="hyper" href="Raipur To Patna Buses.html">Raipur To Patna</a></li>
+    <li><a class="hyper" href="Raipur To Aurangabad Buses.html">Raipur To Aurangabad</a></li>
+    <li><a class="hyper" href="Raipur To Allahabad Buses.html">Raipur To Allahabad</a></li>
+    
+  </ul>
+  </div>
+</div>
+
+<!-- FOOTER START -->
+<div class="contact">
+<h2>Contact details</h2>
+          <p class="icon"><i class="fa fa-phone fa-lg" aria-hidden="true"></i>  +91 8982906140</p>
+          <p class="icon"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>  Raipur, Chhattisgarh</p>
+          <p class="icon"><i class="fa fa-envelope" aria-hidden="true"></i>  teamakgroups@gmail.com</p>
+       </div>
+       
+<div class="footer">
+  <div class="contain">
+  <div class="col">
+    <h1>Branchs</h1>
+    <ul>
+      <li><a class="link" href="Bus Click Raipur.html">Bus Click Raipur - BCR</a></li>
+      <li><a class="link" href="HKBuses.html">H.K. Buses</a></li>
+      <li><a class="link" href="Buses Of Mandla.html">Buses of mandla</a></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Products</h1>
+    <ul>
+      <li><a class="link" href="Buses.html">Buses</a></li>
+      <li><a class="link" href="Busbodybuilders.html">Bus Body builders</a></li>
+      <li><a class="link" href="Oldbus.html">Old Bus Sell</a></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Accounts</h1>
+    <ul>
+      <li><a class="link" href="About.html">About</a></li>
+      <li><a class="link" href="Mission.html">Mission</a></li>
+      <li><a class="link" href="Service.html">Services</a></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Resources</h1>
+    <ul>
+      <li>Webmail</li>
+      <li>Redeem code</li>
+      <li>WHOIS lookup</li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Support</h1>
+    <ul>
+      <li><a class="link" href="#">Contact us</li>
+      <li><a class="link" href="#">Web chat</li>
+      <li><a class="link" href="#">Open ticket</li>
+    </ul>
+  </div>
+  <div class="col social">
+    <h1>Social</h1>
+    <ul>
+      <li><a href="https://m.facebook.com/akbuses/" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+      <li><a href="https://www.instagram.com/akbuses/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://www.youtube.com/c/AKBUSES" target="_blank"><i class="fa fa-youtube"></i></a></li>
+      <li><a href="https://akbuses.in/" target="_blank"><i class="fa fa-google"></i></a></li>
+      <li><a href="https://wa.me/c/918982906140" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+    </ul>
+  </div>
+<div class="clearfix"></div>
+</div>
+
+<div class="copyright">
+ <h6>&#169;AK BUSES 2020-21 ALL RIGHTS RESERVED<br>Powerd By<b> FasterPowerTechnologies</b></h6>
+</div>
+<!-- END OF FOOTER -->
+
+<script>
+// slideshow:
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+// + note :
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
