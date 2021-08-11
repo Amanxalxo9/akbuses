@@ -1,45 +1,409 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>Raipur To Hyderabad Buses | AK Buses</title>
+<html>
+ <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+   <title> Raipur To Hyderabad Buses | AK Buses</title>
 <style>
-body {
-  margin:0;
+body {margin:0;
+      font-family: Verdana, sans-serif;
+      opacity:;}
+
+header {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align:center;
+  color:white;
+}
+.btn {
+  background-color:#333;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: ;
+  float:left;
+}
+.monster {
+  width: 100%;
+  padding:5px;
+  margin-top:10px;
+  text-align:;
+  opacity:;
+  line-hight:1.5;
+  
+}
+
+.main {
   padding:10px;
-  font-family: Verdana, sans-serif;
+  margin-top: 30px;
+  height: 500px; /* Used in this example to enable scrolling */
+  padding-right: 20px;
+ 
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 5px;
+  border:1px #000000;
+  padding:5px;
+  border:1px solid blue;
 
 }
 
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  color:white;
+  background-color:red;
+}
+
+.card .box{
+  text-decoration:none;
+  color:#333333;
+}
+
+.card .box:hover{
+  color:white;
+
+}
+.card img {
+  border-radius: 5px 5px 0 0;
+  width:25%;
+  padding:10px;
+  float:right;
+}
+
+.container {
+  padding: 2px 16px;
+
+}
+.card i{
+  font-size:12px;
+  float:;
+  padding:px;
+  margin-top:;
+}
+.card .icon {
+  padding:8px;
+  float:right;
+  margin-top:-50px;
+  
+}
+h6 {
+  margin-top:10px;
+  font-weight: 500;
+}
+h5 {
+  font-weight: 500;
+
+}
 p {
   font-family:inherit;
+  font-varient:inherit;
+  font-size:14px;
+  font-weight: 400;
+}
+.top {
+  font-family:inherit;
+  font-varient:inherit;
   font-size:15px;
   font-weight: 500;
-  color:red;
   text-align:center;
+  margin-right:50px;
+
 }
-img{
-  width:50%;
-  margin-left:180px;
-  padding:10px;
+.png{
+  width:4px;
 }
 @media all and (max-width: 600px) {
  
-  img {
-  width:60%;
-  padding:5px;
-  margin-left:70px;
+  .card img {
+  width:35%;
+  }
+    
+  .card .icon {
+  margin-top:-50px;
+  
+  }
+  .card {
+  border:none;
   }
 }
 </style>
 </head>
 <body>
 
-<h2>Raipur To Hyderabad Buses</h2>
-<p> Currently Not available</p>
-<img src="NoBus.png">
+<header>
+<button class="btn" onclick="goBack()"> <i class="fa fa-arrow-left"></i> </button>
 
+  <p class="top"> RAIPUR - HYDERABAD </p>
+</header>
+
+
+
+<div class="main">
+ <br>
+ <div class="monster">
+ <p><b> Currently 12 Buses 6 Operator Available </b></p>
+ <p> Frist Bus - 03:15PM </p>
+ <p> Last Bus - 06:30PM</p>
+ <p> Duration - 14:15Hours</p>
+ <hr>
+ </div>
+ <br>
+ 
+ <div class="card">
+   <a href="MetroHyd1.html" class="box">
+   <img src="MetroHyd1.png" alt="Royal Travels png">
+   <div class="container">
+   <h4><b>Metro/Royal Travels </b></h4> 
+   <h5>03:15PM - 06:30AM (15h15m)</h4> 
+   <p>Raipur - Hyderabad</p>
+   <h6>2x1 A/C SLEEPER</h6>
+   <div class="icon">
+   <i class="fa fa-snowflake-o"></i>
+   <i class="fa fa-plug"></i>  
+   <i class="fa fa-bed"></i>
+   <i class="fa fa-fire-extinguisher"></i>
+   </div>
+   </div>
+   </a>
+   </div>
+   <br>
+   
+   <div class="card">
+   <a href="KankerHyd1.html" class="box">
+   <img src="KankerHyd.png" alt="Bharatbenz Bus kanker ">
+   <div class="container">
+   <h4><b>Kanker Roadways Pvt. Ltd. </b></h4> 
+   <h5>03:30PM - 06:35AM (15h05m)</h4> 
+   <p>RG Raipur - Hyderabad </p>
+   <h6>2x1 A/C SLEEPER SEATER COACH</h6>
+   <div class="icon">
+   <i class="fa fa-snowflake-o"></i>
+   <i class="fa fa-plug"></i>  
+   <i class="fa fa-bed"></i>
+   
+   </div>
+   </div>
+   </a>
+   </div>
+   
+   <br>
+   <div class="card">
+   <a href="OrangeHyd.html" class="box">
+   <img src="OrangeHyd.png" alt="Kanker Roadways Bharatbenz Bus">
+   <div class="container">
+   <h4><b> Orange Tours & Travels  </b></h4> 
+   <h5>03:30PM - 07:00AM (15h30m)</h4> 
+   <p>Raipur - Hyderabad</p>
+   <h6>2x1 A/C SLEEPER Bharatbenz </h6>
+   <div class="icon">
+   <i class="fa fa-snowflake-o"></i>
+   <i class="fa fa-plug"></i>  
+   <i class="fa fa-bed"></i>
+   <i class="fa fa-map-marker"></i>
+   <i class="fa fa-fire-extinguisher"></i>
+   </div>
+   </div>
+   </a>
+   </div>
+   
+   
+   <br>
+   <div class="card">
+   <a href="ManojHyd1.html" class="box">
+   <img src="ManojHyd1.png" alt="Manoj Travels Ac Sleeper Pune Bus">
+   <div class="container">
+   <h4><b>Manoj Travels</b></h4> 
+   <h5>04:00PM - 06:30AM (14h15m)</h4> 
+   <p>Raipur - Hyderabad</p>
+   <h6>2x1 A/C SLEEPER </h6>
+   <div class="icon">
+   <i class="fa fa-snowflake-o"></i>
+   <i class="fa fa-plug"></i>  
+   <i class="fa fa-bed"></i>
+   </div>
+   </div>
+   </a>
+   </div>
+   
+   <br>
+   <div class="card">
+   <a href="KankerHyd2.html" class="box">
+   <img src="KankerHyd.png" alt="Kanker Roadways Bus">
+   <div class="container">
+   <h4><b>Kanker Roadways Pvt. Ltd. </b></h4> 
+   <h5>04:00PM - 08:00AM (16h00m)</h4> 
+   <p> Raipur - Hyderabad</p>
+   <h6>2x1 Non A/C SLEEPER COACH</h6>
+   <div class="icon">
+   <i class="fa fa-plug"></i>  
+   <i class="fa fa-bed"></i>
+   <i class="fa fa-fire-extinguisher"></i>
+   </div>
+   </div>
+   </a>
+   </div>
+   
+   <br>
+   <div class="card">
+   <a href="KankerHyd3.html" class="box">
+   <img src="KRH.png" alt="Kanker Roadways Bus">
+   <div class="container">
+   <h4><b>Kanker Roadways Pvt. Ltd. </b></h4> 
+   <h5>04:30PM - 08:15AM (15h45m)</h4> 
+   <p>Raipur - Hyderabad</p>
+   <h6>2x1 Non A/C SLEEPER COACH</h6>
+   <div class="icon">
+   <i class="fa fa-snowflake-o"></i>
+   <i class="fa fa-plug"></i>  
+   <i class="fa fa-bed"></i>
+   <i class="fa fa-cutlery"></i>
+   <i class="fa fa-map-marker"></i>
+   <i class="fa fa-wifi"></i>
+   <i class="fa fa-fire-extinguisher"></i>
+   </div>
+   </div>
+   </a>
+   </div>
+   <br>
+   
+   <div class="card">
+   <a href="KankerHyd4.html" class="box">
+   <img src="KRH.png" alt="Kanker Roadways Bharatbenz Sleeper Bus">
+   <div class="container">
+   <h4><b>Kanker Roadways Pvt. Ltd. </b></h4> 
+   <h5>05:00PM - 09:00AM (16h00m)</h4> 
+   <p>Raipur - Hyderabad</p>
+   <h6>Bharatbenz A/C SLEEPER COACH</h6>
+   <div class="icon">
+   <i class="fa fa-snowflake-o"></i>
+   <i class="fa fa-plug"></i>  
+   <i class="fa fa-bed"></i>
+   <i class="fa fa-cutlery"></i>
+   <i class="fa fa-map-marker"></i>
+   <i class="fa fa-wifi"></i>
+   <i class="fa fa-fire-extinguisher"></i>
+   </div>
+   </div>
+   </a>
+   </div>
+   <br>
+   
+   <div class="card">
+   <a href="Gurudev.html" class="box">
+   <img src="Gurudev.png" alt="gurudev bus png">
+   <div class="container">
+   <h4><b>Gurudev Travels</b></h4> 
+   <h5>05:15PM - 07:30AM (14h15m)</h4> 
+   <p>Raipur - Hyderabad</p>
+   <h6>2x1 A/C SLEEPER </h6>
+   <div class="icon">
+   <i class="fa fa-plug"></i>  
+   <i class="fa fa-bed"></i>
+   
+   </div>
+   </div>
+   </a>
+   </div>
+ <br>
+  
+  <div class="card">
+   <a href="ManojHyd2.html" class="box">
+    <img src="ManojHyd1.png" alt="Manoj Bus png">
+  <div class="container">
+   <h4><b>Manoj Travels</b></h4> 
+   <h5>05:30PM - 07:45AM (14h15m)</h4> 
+    <p>Raipur - Hyderabad</p>
+    <h6>2x1 A/C SLEEPER </h6>
+  <div class="icon">
+  <i class="fa fa-snowflake-o"></i>
+  <i class="fa fa-plug"></i>  
+  <i class="fa fa-bed"></i>
+  <i class="fa fa-fire-extinguisher"></i>
+  </div>
+   </div>
+    </a>
+  </div>
+  
+  
+  <br>
+  <div class="card">
+  <a href="KankerHydVolvo.html" class="box">
+  <img src="KRvolvo.png" alt="Kanker Roadways volvo Bus png">
+  <div class="container">
+  <h4><b>Kanker Roadways Pvt. Ltd. </b></h4> 
+  <h5>06:00PM - 07:30AM (13h30m)</h4> 
+  <p>Raipur - Hyderabad</p>
+  <h6>Volvo Multi Axle Sleeper </h6>
+  <div class="icon">
+  <i class="fa fa-snowflake-o"></i>
+  <i class="fa fa-plug"></i>  
+  <i class="fa fa-bed"></i>
+  <i class="fa fa-cutlery"></i>
+  <i class="fa fa-map-marker"></i>
+  <i class="fa fa-wifi"></i>
+  <i class="fa fa-fire-extinguisher"></i>
+  </div>
+  </div>
+  </a>
+  </div>
+  
+  <br>
+  <div class="card">
+  <a href="Gurudev.html" class="box">
+  <img src="Gurudev.png" alt="Gurudev Travels Png">
+  <div class="container">
+  <h4><b>Gurudev Travels</b></h4> 
+  <h5>06:15PM - 08:30AM (14h15m)</h4> 
+  <p>Raipur - Hyderabad</p>
+  <h6>2x1 A/C SLEEPER </h6>
+  <div class="icon">
+  <i class="fa fa-plug"></i>  
+  <i class="fa fa-bed"></i>
+  
+  </div>
+  </div>
+  </a>
+  </div>
+  
+  <br>
+  <div class="card">
+  <a href="KankerHyd6.html" class="box">
+  <img src="KRP.png" alt="Kanker Roadways platinum Bus png">
+  <div class="container">
+  <h4><b>Kanker Roadways Pvt. Ltd. </b></h4> 
+  <h5>06:30PM - 10:25AM (15h55m)</h4> 
+  <p>Raipur - Hyderabad</p>
+  <h6>2x1 AC SLEEPER Platinum Class</h6>
+  <div class="icon">
+  <i class="fa fa-snowflake-o"></i>
+  <i class="fa fa-plug"></i>  
+  <i class="fa fa-bed"></i>
+  <i class="fa fa-cutlery"></i>
+  <i class="fa fa-map-marker"></i>
+  <i class="fa fa-wifi"></i>
+  <i class="fa fa-fire-extinguisher"></i>
+  </div>
+  </div>
+  </a>
+  </div>
+  
+  <br>
+</div>
+<footer>
+
+</footer>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
 </body>
 </html>
