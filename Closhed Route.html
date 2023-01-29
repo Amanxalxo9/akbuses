@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title> Closed Bus Route list | AK Buses</title>
+ <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="icon" type="image/x-icon" href="favicon.png">
+   
+   <title>New Service -Aap Ki Buses | AK Buses</title>
 <style>
 body {margin:0;
-     font-family: Verdana, sans-serif;    
+
+      font-family: Verdana, sans-serif;
+      background-color:#ffffff;
 }
 
 header {
   overflow: hidden;
-  background-color: #333;
+  background-color: #000080;
   position: fixed;
   top: 0;
   width: 100%;
@@ -19,7 +23,7 @@ header {
   color:white;
 }
 .btn {
-  background-color:#333;
+  background-color:#000080;
   border: none;
   color: white;
   padding: 12px 16px;
@@ -28,12 +32,28 @@ header {
   float:left;
 }
 
+
+.mod{
+  width:8%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  width:100%;
+}
+
+.png{
+  width:4px;
+}
 h4{
   text-align:center;
   background-color:#1abc9c;
   color:white;
   padding:10px;
 }
+
+/* Main Content*/
 .main {
   padding:10px;
   margin-top: 30px;
@@ -58,153 +78,114 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   font-weight: 500;
   text-align:center;
   margin-right:50px;
-
+}
+.top{
+  width:8%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a:link {
+  text-decoration: none;
+  color:blue;
+}
+a:hover {
+  color: red;
+}
+a:visited {
+  color: black;
+}
+@media all and (max-width: 600px) {
+ 
+  .card img {
+  width:35%;
+  }
+    
+  .card .icon {
+  margin-top:-37px;
+  
+  }
+  .mod{
+  width:18%;
+}
+  
 }
 </style>
 </head>
 <body>
+
 <header>
 <button class="btn" onclick="goBack()"> <i class="fa fa-arrow-left"></i> </button>
-
-  <p class="top"> Closed Routes </p>
+  
+   <p class="mod"><img src="cglogo2.png"></p>
 </header>
-    <div class="main">
-    
-    <h4>All Closed Bus Routes</h4>
-    
+     <div class="main">
+     
+     <h4>Closed Routes</h4>
+     
     <table>
-    <tr>  
-    <td> Raipur To Hyderabad </td>
-    </tr>
-    
-    <tr> 
-    <td> Raipur To Indore </td>
-    </tr>
-    <tr> 
-    <td> Raipur To Puri </td>
-    </tr>
-    <tr>
-    <td> Raipur To Cuttack </td>
-    </tr>
-    <tr> 
-    <td> Bhilai To Puri</td>
-    </tr>
-    <tr>
-      <td> Bhilai To Bhubaneswar </td>
-    </tr>
-    <tr>
-    <td> Bhilai To Berhampur </td>
-    </tr>
-    <tr>
-    <td> Raipur To Rourkela </td>
-    </tr>
-    <tr>
-    <td> Durg To Bhawanipatna </td>
-    </tr>
-    
-    <tr>
-    <td> Durg To Borda </td>
-    </tr>
-    <tr>
-    <td> Raipur To Sambalpur</td>
-    </tr>
-    <tr>
-    <td> Durg To Patna </td>
-    </tr>
-    <tr>
-    <td> Durg To Bodhgaya </td>
-    </tr>
-    <tr>
-    <td> Durg To Ramanujganj </td>
-    </tr>
-    <tr>
-    <td> Durg To Bagicha </td>
-    </tr>
-    <tr>
-    <td> Durg To Jashpur </td>
-    </tr>
-    <tr>
-    <td> Durg To Daltonganj </td>
-    </tr>
-    <tr>
-    <td> Durg To khongapani </td>
-    </tr>
-    <tr>
-    <td> Durg To Mahendragarh</td>
-    </tr>
-    <tr>
-    <td> Durg To Khongapani </td>
-    </tr>
-    <tr>
-    <td> Durg To Sasaram (BR)  </td>
-    </tr>
-    <tr>
-    <td> Durg To Aurangabad (BR)  </td>
-    </tr>
-    <tr>
-    <td> Raipur To Jodhpur </td>
-    </tr>
-    <tr>
-    <td> Raipur To Phalodi </td>
-    </tr>
-    <tr>
-    <td>Raipur To Bhopal </td>
-    </tr>
-    <tr>
-    <td>Raipur To Hoshangabad </td>
-    </tr>
-    <tr>
-    <td> Raipur To Jabalpur </td>
-    </tr>
-    <tr>
-    <td> Raipur To Chhindwara </td>
-    </tr>
-    <tr>
-    <td> Raipur To Sagar </td>
-    </tr>
-    <tr>
-    <td> Raipur To Satna </td>
-    </tr>
-    <tr>
-    <td> Raipur To Rewa </td>
-    </tr>
-    <tr>
-    <td> Raipur To Sahdol</td>
-    </tr>
-    <tr>
-    <td>Bemetara To Kanpur </td>
-    </tr>
-    <tr>
-    <td>Kawardha To Lucknow </td>
-    </tr>
-    <tr>
-    <td>Raipur To Lucknow </td>
-    </tr>
-    <tr>
-    <td> Raipur To Kolkata </td>
-    </tr>
-    <tr>
-    <td> Durg To Jamshedpur</td>
-    </tr>
-    <tr>
-    <td> Durg To Bokaro</td>
-    </tr>
-    <tr>
-    <td> Durg To Tatanagar </td>
-    </tr>
-    
-    </table>
-    
-    
-    
-    
-    
-    </div>
+     <tr>  
+       <td>Raipur To Kolkata</td>
+     </tr>
+     
+     <tr> 
+        <td>Durg To Jamshedpur</td>
+     </tr>
+     <tr> 
+        <td>Durg To Nanded</td>
+     </tr>
+     <tr>
+        <td>Raipur To  Sagar</td>
+     </tr>
+     <tr> 
+        <td>Raipur To Jodhpur</td>
+     </tr>
+     <tr>
+        <td>Raipur To Phalodi (RJ)</td>
+     </tr>
+     <tr>
+        <td>Raipur To Kanpur</td>
+     </tr>
+   
+     <tr>
+        <td> Durg To Maudaha(UP) </td>
+     </tr>
+     
+<!--     
+     <tr>
+        <td> Durg To Jagdalpur </td>
+     </tr>
+     <tr>
+        <td> Durg To Bacheli</td>
+     </tr>
+     <tr>
+        <td> Durg To Geedam </td>
+     </tr>
+     <tr>
+        <td> Durg To Barsur </td>
+     </tr>
+     <tr>
+        <td> Durg To Dantewada </td>
+     </tr>
+     <tr>
+        <td> Durg To Konta </td>
+     </tr>
+     <tr>
+        <td> Durg To Narayanpur </td>
+     </tr>
+  -->     
+     </table>
+     
+     
+     
+     
+     
+     </div>
 <script>
-function goBack() {
+  function goBack() {
   window.history.back();
-}
+  }
 </script>
 </body>
-
-</html>
+     
+ </html>
